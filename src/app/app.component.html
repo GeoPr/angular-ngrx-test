@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <div>
+    <input style="border: 1px solid" type="text" [(ngModel)]="title" />
+    <button (click)="addTodo()">add</button>
+    <ul>
+      <li *ngFor="let item of todos | async" (click)="removeTodo(item.id)">
+        {{ item.title }}
+      </li>
+    </ul>
+  </div>
+</div>
